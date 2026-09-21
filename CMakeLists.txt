@@ -33,5 +33,10 @@ target_link_libraries(RouteTrack PRIVATE RouteTrackCore)
 add_executable(RouteTrackTests tests/RouteTrackTests.cpp)
 target_link_libraries(RouteTrackTests PRIVATE RouteTrackCore)
 
+set_target_properties(RouteTrack RouteTrackTests PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Release"
+    RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/Release"
+)
+
 enable_testing()
 add_test(NAME RouteTrackTests COMMAND RouteTrackTests)

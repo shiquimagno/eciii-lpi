@@ -20,6 +20,7 @@ std::string PedidoService::registrar(const std::string& cliente, const std::stri
     }
     std::vector<std::string> codigos;
     for (const auto& p : pedidos_) codigos.push_back(p.codigo);
+    for (const auto& evento : eventos_) codigos.push_back(evento.codigoPedido);
     Pedido pedido;
     pedido.codigo = siguienteCodigo("PED", codigos);
     pedido.cliente = clienteLimpio;
@@ -113,4 +114,3 @@ bool PedidoService::eliminar(const std::string& codigo, std::string& error) {
 }
 
 const std::vector<Pedido>& PedidoService::listar() const { return pedidos_; }
-

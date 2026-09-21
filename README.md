@@ -17,6 +17,17 @@ Prototipo académico en C++17 para registrar pedidos, agruparlos por zona, asign
 - Los reportes HTML se generan a partir de reportes CSV y usan una única hoja `styles.css`.
 - No se incorporan GPS, mapas, tráfico, IA, servidores, SQLite, Qt ni aplicaciones móviles.
 
+## Librerías a usar
+- ifstream
+- unorderedmap
+- iostream
+- vector
+- string
+- cctype
+- algorithm
+- limits
+- filesystem
+
 ## Organización
 
 - `Base_proyecto/`: plan, rúbrica y guía de demostración.

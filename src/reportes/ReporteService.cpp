@@ -83,7 +83,7 @@ bool ReporteService::generarIndividuales(std::string& error) const {
             salida << CsvRepository::escapar(pedido.codigo) << ','
                    << CsvRepository::escapar(pedido.cliente) << ','
                    << CsvRepository::escapar(pedido.direccion) << ',' << toString(pedido.zona) << ','
-                   << toString(pedido.estado) << ",,,,,\n";
+                   << toString(pedido.estado) << ",,,,\n";
         }
     }
     return true;
@@ -115,4 +115,3 @@ bool ReporteService::generarTodos(std::string& error) const {
 
     return generarRutas(error) && generarIndividuales(error);
 }
-
